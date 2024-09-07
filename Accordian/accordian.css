@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    background: url(Desert.jpg) no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    background-color: white;
+    padding: 10px 20px;
+    height: auto;
+    width: 450px;
+    border-radius: 10px;
+}
+.container .title{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.container .questandanswer .queston{
+    font-size: 22px;
+    padding: 20px 0;
+    border-bottom: 3px solid gray;
+    cursor: pointer;
+    position: relative;
+}
+.container .questandanswer .queston::after{
+    content: "+";
+    position: absolute;
+    right: -5px;
+    font-weight: 600;
+}
+.container .questandanswer .answer{
+    padding-top: 10px;
+    font-size: 20px;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: .3s;
+}
+.container .questandanswer.active .answer{
+    height: auto;
+}
+.container .questandanswer.questandanswer.active .queston::after{
+    content: "-";
+    position: absolute;
+    right: -5px;
+    font-weight: 600;
+}
+
+.copy{
+    margin-top: 20px;
+    text-align: end;
+}
+.copy span{
+    font-style: italic;
+    color: blue;
+    cursor: pointer;
+}
